@@ -29,4 +29,6 @@ Initial release.
   forward-return horizon.
 - Deterministic unit tests, Hypothesis property-based tests, and naive
   Python-loop benchmark references for the core primitives.
-- GitHub Actions CI (lint, type-check, test) and pre-commit configuration.
+- Pre-commit configuration for local lint/format checks. No CI pipeline
+  in this version; `ruff check .`, `ruff format --check .`,
+  `mypy src/tsfeat`, and `pytest` are run and verified locally.

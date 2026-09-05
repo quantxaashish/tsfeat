@@ -2,7 +2,6 @@
 
 Vectorised primitives for quantitative time-series research.
 
-[![CI](https://github.com/quantxaashish/tsfeat/actions/workflows/ci.yml/badge.svg)](https://github.com/quantxaashish/tsfeat/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
@@ -178,11 +177,15 @@ accidentally leak future information into a signal.
 
 ## Testing
 
+There is no CI pipeline in this version — all checks below are run and
+verified locally before each commit:
+
 ```bash
+ruff check .
+ruff format --check .
+mypy src/tsfeat
 pytest
 pytest --cov=tsfeat --cov-report=term-missing
-mypy src/tsfeat
-ruff check .
 ```
 
 The suite combines deterministic unit tests with hand-computable expected
